@@ -9,14 +9,14 @@ var:
   tags_path : /tags.html
   rss_path: /atom.xml
 
-production_url : http://username.github.com # or your custom domain name
-title : Jekyll Bootstrap
+production_url : http://loic-fejoz.github.com # or your custom domain name
+title : Du bricolage, de l'ingénierie et un peu de zeste
 
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
+  name : Loïc Fejoz
+  email : loic@fejoz.net
+  github : loic-fejoz
+  twitter : loic_fejoz
   feedbuder : feedname
 
 exclude: .rbenv-version
