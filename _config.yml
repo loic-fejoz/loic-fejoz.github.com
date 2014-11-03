@@ -1,22 +1,12 @@
-# This is the default format. 
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:year/:month/:day/:title 
-auto: true
-pygments: true
-var:
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-  rss_path: /atom.xml
+# Site settings
+title: Fejoz
+email: your-email@domain.com
+description: "Est sempter altera via melior"
+baseurl: ""
+url: "http://www.fejoz.net"
+twitter_username: loic_fejoz
+github_username:  loic-fejoz
 
-production_url : http://loic-fejoz.github.com # or your custom domain name
-title : Du bricolage, de l'ingénierie et un peu de zeste
-
-author :
-  name : Loïc Fejoz
-  email : loic@fejoz.net
-  github : loic-fejoz
-  twitter : loic_fejoz
-  feedbuder : feedname
-
-exclude: .rbenv-version
+# Build settings
+markdown: kramdown
+permalink: pretty
