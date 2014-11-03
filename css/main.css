@@ -13,7 +13,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  background-color: #fdfdfd;
+  background-color: #4072b5;
 }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
@@ -32,6 +32,8 @@ a:visited { color: #205caa; }
   padding: 0 30px;
   margin: 0 auto;
   zoom: 1;
+  background-color: #fdfdfd;
+  border-radius: 5px;
 }
 
 
