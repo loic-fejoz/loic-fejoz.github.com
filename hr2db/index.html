@@ -1,0 +1,209 @@
+<!--?xml version="1.0" encoding="iso-8859-1"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" lang="fr"><head>
+    <meta http-equiv="Content-type" content="text/html; charset=windows-1252">
+    <meta name="Author" content="Loïc Fejoz" lang="fr">
+    <meta name="date" content="2007-10-18T18:09:09+00:00">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <link rel="Help" href="/help/" accesskey="0">
+    <meta name="DC.Title" content="hr2db
+" lang="fr">
+    <meta name="DC.Date.created" scheme="W3CDTF" content="2007-10-18">
+    <meta name="DC.Language" scheme="RFC3066" content="fr-FR">
+    <title>Fejoz - hr2db
+</title>
+    <link rel="Stylesheet" type="text/css" href="index_fichiers/style.css" media="print,screen">
+    <link rel="Stylesheet" type="text/css" href="index_fichiers/print.css" media="print">
+    <link rel="Stylesheet" type="text/css" href="index_fichiers/screen.css" media="screen">
+    <link rel="author" href="http://loic.fejoz.net/" xml:lang="fr-FR" title="Loïc Fejoz">
+    <link rel="shortcut icon" type="image/x-icon" href="/logo.ico">
+    <link rel="Search" href="http://www.google.fr/search?hl=fr&amp;q=site%3Aloic.fejoz.free.fr&amp;btnG=Recherche+Google&amp;meta=">
+	<link rel="alternate" type="application/rss+xml" title="research publications" href="http://hal.inria.fr/rss.php?from=all&amp;author=Fejoz">
+    <link rel="alternate" type="application/atom+xml" title="blog mariage" href="http://prepasdumariagedetinote.blogspot.com/feeds/posts/default">
+    <link rel="alternate" type="application/atom+xml" title="blog maison" href="http://yermat.blogspot.com/feeds/posts/default">
+
+            <link rel="Start" href="/formatheredis">
+    <link rel="Last" href="/hrreportmaker">
+    <link rel="Index" href="/">
+    <link rel="Next" href="/hrreportmaker">
+    <link rel="Prev" href="/hr2ged">
+  </head>    
+  <body id="hr2db">
+    <div id="container">
+      <div id="content">
+        <h1>hr2db
+</h1>
+        
+
+      <h2>Download</h2>
+
+
+
+<table class="fileTable">
+
+ <tbody><tr><th>Nom</th><th>Taille</th><th>Date</th></tr>
+
+<tr>
+
+   <td class="fileCell"><a href="/hr2db/Heredis2Database-0.0.5.exe.zip" title="Heredis2Database-0.0.5.exe.zip">Heredis2Database-0.0.5.exe.zip</a></td>
+
+   <td class="fileCell">881055</td>
+
+   <td class="fileCell">2006-04-06T13:53:42Z</td>
+
+ </tr>
+
+<tr>
+
+   <td class="fileCell"><a href="/hr2db/Heredis2Database-0.0.5-source.zip" title="Heredis2Database-0.0.5-source.zip">Heredis2Database-0.0.5-source.zip</a></td>
+
+   <td class="fileCell">14986</td>
+
+   <td class="fileCell">2006-04-06T13:53:42Z</td>
+
+ </tr>
+
+</tbody></table>
+
+  <h2>Fonctionnalités</h2>
+
+
+
+  <ul>
+
+    <li>Export vers une base MYSQL,</li>
+
+    <li>Export vers une base ACCESS (via ODBC),</li>
+
+    <li>Export vers une base Gadfly.</li>
+
+  </ul>
+
+  <h2>Evolution(s)</h2>
+
+  <ul>
+
+
+
+    <li>0.0.5 : Ajout de l'option --list qui permet d'indiquer les tables à utiliser.</li>
+
+    <li>0.0.4 : Modification du SQL généré pour MySQL en rajoutant une clef primaire non nulle.</li>
+
+    <li>0.0.3 : Créer un fichier de log plus conséquent pour la résolution de problème.</li>
+
+    <li>0.0.2 : exporte correctement le type des évenements. Le champ 
+"private" des adresses est maintenant un champ Oui/Non sous Access.</li>
+
+  </ul>
+
+  <h2>A venir</h2>
+
+
+
+  <p>Le programme inverse ? ;-)</p>
+
+  <p>Le mettre sur sourceforge (noter qu'en attendant les sources sont sous licences GPL).</p>
+
+  <h2>Installation</h2>
+
+  <p>Dézipper le fichier dans un répertoire quelconque (ex : c:\Heredis2Database) et c'est tout.</p>
+
+  <p>Pour Access, aller voir <a class="external" href="http://perso.wanadoo.fr/bardou/michel/basedonnees/accessodbc.htm">accessodbc de Michel Bardou</a> pour faire une connection ODBC.</p>
+
+
+
+  <p>Pour tester avec MySQL, je vous recommande <a class="external" href="http://www.easyphp.org/">http://www.easyphp.org</a>.</p>
+
+  <h2>Utilisation</h2>
+
+  <p>Pour plus de détails sur les tables crées, je vous conseille de faire un tour sur <a href="/formatheredis/">le format d'Heredis</a>.</p>
+
+  <p>Ceci a été testé avec des fichier hr5 et des fichier hr7.
+
+Le plus gros fichier contenait plus de 50 000 individus et l'export a été fait en moins de 8mn !</p>
+
+  <p>Exemple : 
+
+
+
+</p><pre class="dos">
+C:\Heredis2Gedcom&gt;Heredis2Database --help
+
+usage: Heredis2Database [options] fichier_heredis database_name
+
+
+
+options:
+
+  -h, --help            show this help message and exit
+
+  -tTYPE, --type=TYPE   type de la base de donnees : MYSQL [default], ACCESS,
+
+                        ODBC, GADFLY
+
+  -mHOST, --host=HOST   machine de la base de donnees
+
+  -uUSER, --user=USER   utilisateur de connexion a la base
+
+  -pPASSWORD, --password=PASSWORD
+
+                        mot de passe de l'utilisateur de connexion
+
+  -r, --replace         remplace la definition des tables existantes
+
+  -f, --flush           vide les tables avant de les remplir
+
+  -lTABLES, --list=TABLES
+
+                        liste des tables a inserer/mettre a jour
+
+
+
+Exemple :
+
+Heredis2Database -tMYSQL -uloic -ploicpassword -f fejoz.hr7 fejoz
+
+Heredis2Database -tMYSQL -uloic -f fejoz.hr7 fejoz
+
+Heredis2Database -tACCESS fejoz.hr5 fejoz
+
+Heredis2Database -tGADFLY fejoz.hr5 fejoz
+
+Heredis2Database -lSource,Adresse fejoz.hr5 fejoz
+
+</pre>
+
+      </div><!-- div content -->
+      <div id="intro">
+        <div id="logo">
+	<a id="logoimg" href="/" title="Page d'accueil de Loïc Fejoz"><img src="index_fichiers/logo.gif" alt="Accueil Fejoz.net" height="78" width="140"></a>
+<br>
+          <a id="logotext" href="/" title="Page d'accueil de Loïc Fejoz" accesskey="x">Accueil</a>
+        </div>
+		<div id="menu">
+	  <div class="menutitle">À voir aussi</div>
+<ul class="menu">
+  <li><a href="/formatheredis/" title="Format des fichiers Heredis 5 et 7
+">Format Heredis@
+</a></li>
+  <li><a href="/hrlib/" title="Librairie Python pour lire les fichiers de Heredis">hrlib
+</a></li>
+  <li><a href="/hr2ged/" title="Export d'un fichier Heredis en un fichier Gedcom">hr2ged
+</a></li>
+  <li><a href="/hrreportmaker/">hrReportMaker
+</a></li>
+</ul>
+	</div>
+	          </div><!-- div  intro -->
+      <div id="footer"><div class="contact vcard" about="http://www.fejoz.net/loic">
+	<address><span class="fn n" id="loic" property="foaf:name">Loïc Fejoz</span> <a href="mailto:loic@fejoz.net" rel="foaf:mbox" class="email">loic@fejoz.net</a></address></div>
+	<!-- Created: Sat Feb 25 14:44:44 CET 2006 -->
+	<!-- hhmts start -->
+	Dernière Modification : Thu Oct 18 18:09:09 GMT 2007
+        <!-- hhmts end --><br>
+      </div> <!-- div footer -->
+      <div id="cssdiv1"></div>
+    </div> <!-- div container -->
+  
+
+</body></html>

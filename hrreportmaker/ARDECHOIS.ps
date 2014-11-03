@@ -1,0 +1,2798 @@
+%!PS-Adobe-2.0
+%%Creator: dot version 1.10 (Wed Jul 9 23:09:17 EDT 2003)
+%%For: Bill Gates
+%%Title: fejoz
+%%Pages: (atend)
+%%BoundingBox: 35 35 1409 3144
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+
+EncodingVector
+  dup 306 /AE
+  dup 301 /Aacute
+  dup 302 /Acircumflex
+  dup 304 /Adieresis
+  dup 300 /Agrave
+  dup 305 /Aring
+  dup 303 /Atilde
+  dup 307 /Ccedilla
+  dup 311 /Eacute
+  dup 312 /Ecircumflex
+  dup 313 /Edieresis
+  dup 310 /Egrave
+  dup 315 /Iacute
+  dup 316 /Icircumflex
+  dup 317 /Idieresis
+  dup 314 /Igrave
+  dup 334 /Udieresis
+  dup 335 /Yacute
+  dup 376 /thorn
+  dup 337 /germandbls
+  dup 341 /aacute
+  dup 342 /acircumflex
+  dup 344 /adieresis
+  dup 346 /ae
+  dup 340 /agrave
+  dup 345 /aring
+  dup 347 /ccedilla
+  dup 351 /eacute
+  dup 352 /ecircumflex
+  dup 353 /edieresis
+  dup 350 /egrave
+  dup 355 /iacute
+  dup 356 /icircumflex
+  dup 357 /idieresis
+  dup 354 /igrave
+  dup 360 /dcroat
+  dup 361 /ntilde
+  dup 363 /oacute
+  dup 364 /ocircumflex
+  dup 366 /odieresis
+  dup 362 /ograve
+  dup 365 /otilde
+  dup 370 /oslash
+  dup 372 /uacute
+  dup 373 /ucircumflex
+  dup 374 /udieresis
+  dup 371 /ugrave
+  dup 375 /yacute
+  dup 377 /ydieresis  
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+	dup 1 exch div /InvScaleFactor exch def
+	dup scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw aligned label in bounding box aligned to current point
+/alignedtext {			% width adj text
+	/text exch def
+	/adj exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			text stringwidth pop adj mul 0 rmoveto
+		} if
+		[] 0 setdash
+		text show
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 1409 3144
+%%PageOrientation: Landscape
+gsave
+35 35 1374 3109 boxprim clip newpath
+36 36 translate
+gsave 1372 0 translate 90 rotate
+0 0 1 beginpage
+grestore
+1372 0 translate 90 rotate
+0.000 0.000 0.000 graphcolor
+14.00 /Times-Roman set_font
+
+%	132
+gsave 10 dict begin
+newpath 0 1320 moveto
+215 1320 lineto
+215 1356 lineto
+0 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+107 1341 moveto 201 -0.5 (Joséphine Euphroisie chalaye) alignedtext
+107 1325 moveto 98 -0.5 (o 23 OCT 1876) alignedtext
+end grestore
+end grestore
+
+%	201
+gsave 10 dict begin
+335 1250 49 18 ellipse_path
+stroke
+gsave 10 dict begin
+335 1245 moveto 76 -0.5 (x BEF 1875) alignedtext
+end grestore
+end grestore
+
+%	132 -> 201
+newpath 154 1320 moveto
+194 1304 252 1282 291 1267 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 293 1269 moveto
+301 1263 lineto
+291 1264 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 293 1269 moveto
+301 1263 lineto
+291 1264 lineto
+closepath
+stroke
+end grestore
+
+%	121
+gsave 10 dict begin
+newpath 167 1136 moveto
+326 1136 lineto
+326 1188 lineto
+167 1188 lineto
+closepath
+stroke
+gsave 10 dict begin
+246 1173 moveto 145 -0.5 (Régis Joseph chalaye) alignedtext
+246 1157 moveto 79 -0.5 (o ABT 1843) alignedtext
+246 1141 moveto 136 -0.5 (+ BEF 20 JUN 1880) alignedtext
+end grestore
+end grestore
+
+%	201 -> 121
+newpath 318 1233 moveto
+307 1222 293 1208 280 1195 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 282 1193 moveto
+273 1188 lineto
+278 1197 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 282 1193 moveto
+273 1188 lineto
+278 1197 lineto
+closepath
+stroke
+end grestore
+
+%	127
+gsave 10 dict begin
+newpath 343 1144 moveto
+507 1144 lineto
+507 1180 lineto
+343 1180 lineto
+closepath
+stroke
+gsave 10 dict begin
+425 1165 moveto 150 -0.5 (Marie Mélanie chazot) alignedtext
+425 1149 moveto 80 -0.5 (o ABT 1854) alignedtext
+end grestore
+end grestore
+
+%	201 -> 127
+newpath 352 1233 moveto
+366 1220 384 1202 399 1187 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 401 1189 moveto
+406 1180 lineto
+397 1185 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 401 1189 moveto
+406 1180 lineto
+397 1185 lineto
+closepath
+stroke
+end grestore
+
+%	134
+gsave 10 dict begin
+newpath 232 1320 moveto
+439 1320 lineto
+439 1356 lineto
+232 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+335 1341 moveto 193 -0.5 (Marie Claire Louise chalaye) alignedtext
+335 1325 moveto 99 -0.5 (o 20 JUN 1880) alignedtext
+end grestore
+end grestore
+
+%	134 -> 201
+newpath 335 1320 moveto
+335 1308 335 1291 335 1277 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 338 1278 moveto
+335 1268 lineto
+333 1278 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 338 1278 moveto
+335 1268 lineto
+333 1278 lineto
+closepath
+stroke
+end grestore
+
+%	137
+gsave 10 dict begin
+newpath 513 1232 moveto
+722 1232 lineto
+722 1268 lineto
+513 1268 lineto
+closepath
+stroke
+gsave 10 dict begin
+617 1253 moveto 195 -0.5 (Jean Joseph Eugène chalaye) alignedtext
+617 1237 moveto 73 -0.5 (o ABT 1811) alignedtext
+end grestore
+end grestore
+
+%	10
+gsave 10 dict begin
+newpath 1252 1224 moveto
+1382 1224 lineto
+1382 1276 lineto
+1252 1276 lineto
+closepath
+stroke
+gsave 10 dict begin
+1317 1261 moveto 116 -0.5 (Jules Régis astier) alignedtext
+1317 1245 moveto 96 -0.5 (o 14 JUN 1896) alignedtext
+1317 1229 moveto 110 -0.5 (+ 22 MAY 1974) alignedtext
+end grestore
+end grestore
+
+%	327
+gsave 10 dict begin
+1056 1162 27 18 ellipse_path
+stroke
+end grestore
+
+%	10 -> 327
+newpath 1252 1224 moveto
+1195 1204 1129 1183 1090 1172 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1091 1170 moveto
+1081 1169 lineto
+1090 1175 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1091 1170 moveto
+1081 1169 lineto
+1090 1175 lineto
+closepath
+stroke
+end grestore
+
+%	269
+gsave 10 dict begin
+newpath 1000 1048 moveto
+1112 1048 lineto
+1112 1100 lineto
+1000 1100 lineto
+closepath
+stroke
+gsave 10 dict begin
+1056 1085 moveto 98 -0.5 (Auguste astier) alignedtext
+1056 1069 moveto 79 -0.5 (o ABT 1850) alignedtext
+1056 1053 moveto 38 -0.5 (+ 1931) alignedtext
+end grestore
+end grestore
+
+%	327 -> 269
+newpath 1056 1144 moveto
+1056 1134 1056 1122 1056 1110 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1059 1110 moveto
+1056 1100 lineto
+1054 1110 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1059 1110 moveto
+1056 1100 lineto
+1054 1110 lineto
+closepath
+stroke
+end grestore
+
+%	29
+gsave 10 dict begin
+newpath 921 1056 moveto
+980 1056 lineto
+980 1092 lineto
+921 1092 lineto
+closepath
+stroke
+gsave 10 dict begin
+950 1069 moveto 45 -0.5 (Louise) alignedtext
+end grestore
+end grestore
+
+%	327 -> 29
+newpath 1039 1148 moveto
+1023 1135 1000 1117 980 1100 curveto
+979 1099 979 1099 978 1099 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 980 1097 moveto
+971 1092 lineto
+976 1101 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 980 1097 moveto
+971 1092 lineto
+976 1101 lineto
+closepath
+stroke
+end grestore
+
+%	140
+gsave 10 dict begin
+newpath 739 1232 moveto
+872 1232 lineto
+872 1268 lineto
+739 1268 lineto
+closepath
+stroke
+gsave 10 dict begin
+805 1253 moveto 119 -0.5 (Marie Julie vallet) alignedtext
+805 1237 moveto 79 -0.5 (o ABT 1834) alignedtext
+end grestore
+end grestore
+
+%	312
+gsave 10 dict begin
+1056 994 27 18 ellipse_path
+stroke
+end grestore
+
+%	269 -> 312
+newpath 1056 1048 moveto
+1056 1039 1056 1030 1056 1022 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1059 1022 moveto
+1056 1012 lineto
+1054 1022 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1059 1022 moveto
+1056 1012 lineto
+1054 1022 lineto
+closepath
+stroke
+end grestore
+
+%	280
+gsave 10 dict begin
+newpath 936 888 moveto
+1065 888 lineto
+1065 940 lineto
+936 940 lineto
+closepath
+stroke
+gsave 10 dict begin
+1000 925 moveto 115 -0.5 (Mariette chalaye) alignedtext
+1000 909 moveto 76 -0.5 (o ABT 1813) alignedtext
+1000 893 moveto 78 -0.5 (+ AFT 1863) alignedtext
+end grestore
+end grestore
+
+%	312 -> 280
+newpath 1044 977 moveto
+1038 968 1031 957 1023 947 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1026 947 moveto
+1018 940 lineto
+1022 950 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1026 947 moveto
+1018 940 lineto
+1022 950 lineto
+closepath
+stroke
+end grestore
+
+%	276
+gsave 10 dict begin
+newpath 1082 888 moveto
+1187 888 lineto
+1187 940 lineto
+1082 940 lineto
+closepath
+stroke
+gsave 10 dict begin
+1134 925 moveto 86 -0.5 (Isidore astier) alignedtext
+1134 909 moveto 91 -0.5 (o 14 FEB 1816) alignedtext
+1134 893 moveto 78 -0.5 (+ AFT 1863) alignedtext
+end grestore
+end grestore
+
+%	312 -> 276
+newpath 1071 979 moveto
+1080 970 1091 958 1102 947 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1104 949 moveto
+1109 940 lineto
+1100 945 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1104 949 moveto
+1109 940 lineto
+1100 945 lineto
+closepath
+stroke
+end grestore
+
+%	143
+gsave 10 dict begin
+newpath 1495 1320 moveto
+1669 1320 lineto
+1669 1356 lineto
+1495 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+1582 1341 moveto 160 -0.5 (Joseph Etienne chalaye) alignedtext
+1582 1325 moveto 75 -0.5 (o BEF 1883) alignedtext
+end grestore
+end grestore
+
+%	303
+gsave 10 dict begin
+newpath 681 152 moveto
+784 152 lineto
+784 188 lineto
+681 188 lineto
+closepath
+stroke
+gsave 10 dict begin
+732 165 moveto 89 -0.5 (Jeanne bayle) alignedtext
+end grestore
+end grestore
+
+%	146
+gsave 10 dict begin
+newpath 1879 736 moveto
+2093 736 lineto
+2093 772 lineto
+1879 772 lineto
+closepath
+stroke
+gsave 10 dict begin
+1986 757 moveto 200 -0.5 (Jean François Régis monchal) alignedtext
+1986 741 moveto 77 -0.5 (o ABT 1814) alignedtext
+end grestore
+end grestore
+
+%	19
+gsave 10 dict begin
+newpath 1401 1224 moveto
+1616 1224 lineto
+1616 1276 lineto
+1401 1276 lineto
+closepath
+stroke
+gsave 10 dict begin
+1508 1261 moveto 201 -0.5 (Juliette Marie Sophie chalaye) alignedtext
+1508 1245 moveto 94 -0.5 (o 31 OCT 1898) alignedtext
+1508 1229 moveto 83 -0.5 (+ NOV 1971) alignedtext
+end grestore
+end grestore
+
+%	176
+gsave 10 dict begin
+1515 1162 49 18 ellipse_path
+stroke
+gsave 10 dict begin
+1515 1157 moveto 76 -0.5 (x BEF 1898) alignedtext
+end grestore
+end grestore
+
+%	19 -> 176
+newpath 1510 1224 moveto
+1511 1213 1512 1201 1513 1189 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1515 1190 moveto
+1514 1180 lineto
+1510 1190 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1515 1190 moveto
+1514 1180 lineto
+1510 1190 lineto
+closepath
+stroke
+end grestore
+
+%	35
+gsave 10 dict begin
+newpath 1488 1056 moveto
+1542 1056 lineto
+1542 1092 lineto
+1488 1092 lineto
+closepath
+stroke
+gsave 10 dict begin
+1515 1069 moveto 37 -0.5 (Régis) alignedtext
+end grestore
+end grestore
+
+%	176 -> 35
+newpath 1515 1144 moveto
+1515 1132 1515 1115 1515 1101 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1518 1102 moveto
+1515 1092 lineto
+1513 1102 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1518 1102 moveto
+1515 1092 lineto
+1513 1102 lineto
+closepath
+stroke
+end grestore
+
+%	40
+gsave 10 dict begin
+newpath 1560 1048 moveto
+1778 1048 lineto
+1778 1100 lineto
+1560 1100 lineto
+closepath
+stroke
+gsave 10 dict begin
+1669 1085 moveto 204 -0.5 (Marie Célie Victorine gaillard) alignedtext
+1669 1069 moveto 98 -0.5 (o 16 APR 1874) alignedtext
+1669 1053 moveto 116 -0.5 (+ AFT FEB 1920) alignedtext
+end grestore
+end grestore
+
+%	176 -> 40
+newpath 1542 1147 moveto
+1562 1135 1590 1119 1614 1105 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1615 1107 moveto
+1623 1100 lineto
+1613 1103 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1615 1107 moveto
+1623 1100 lineto
+1613 1103 lineto
+closepath
+stroke
+end grestore
+
+%	148
+gsave 10 dict begin
+newpath 2111 736 moveto
+2215 736 lineto
+2215 772 lineto
+2111 772 lineto
+closepath
+stroke
+gsave 10 dict begin
+2163 757 moveto 90 -0.5 (Marie chazot) alignedtext
+2163 741 moveto 76 -0.5 (o ABT 1815) alignedtext
+end grestore
+end grestore
+
+%	150
+gsave 10 dict begin
+newpath 1687 1320 moveto
+1803 1320 lineto
+1803 1356 lineto
+1687 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+1745 1341 moveto 102 -0.5 (Régis monchal) alignedtext
+1745 1325 moveto 79 -0.5 (o ABT 1789) alignedtext
+end grestore
+end grestore
+
+%	153
+gsave 10 dict begin
+newpath 2008 1144 moveto
+2132 1144 lineto
+2132 1180 lineto
+2008 1180 lineto
+closepath
+stroke
+gsave 10 dict begin
+2070 1165 moveto 110 -0.5 (Joseph monchal) alignedtext
+2070 1149 moveto 80 -0.5 (o ABT 1822) alignedtext
+end grestore
+end grestore
+
+%	283
+gsave 10 dict begin
+newpath 949 736 moveto
+1051 736 lineto
+1051 772 lineto
+949 772 lineto
+closepath
+stroke
+gsave 10 dict begin
+1000 749 moveto 88 -0.5 (Claude astier) alignedtext
+end grestore
+end grestore
+
+%	315
+gsave 10 dict begin
+1000 674 27 18 ellipse_path
+stroke
+end grestore
+
+%	283 -> 315
+newpath 1000 736 moveto
+1000 726 1000 713 1000 702 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1003 702 moveto
+1000 692 lineto
+998 702 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1003 702 moveto
+1000 692 lineto
+998 702 lineto
+closepath
+stroke
+end grestore
+
+%	288
+gsave 10 dict begin
+newpath 878 584 moveto
+980 584 lineto
+980 620 lineto
+878 620 lineto
+closepath
+stroke
+gsave 10 dict begin
+929 597 moveto 88 -0.5 (Claude astier) alignedtext
+end grestore
+end grestore
+
+%	315 -> 288
+newpath 985 659 moveto
+976 650 964 638 954 627 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 956 625 moveto
+947 620 lineto
+952 629 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 956 625 moveto
+947 620 lineto
+952 629 lineto
+closepath
+stroke
+end grestore
+
+%	290
+gsave 10 dict begin
+newpath 998 584 moveto
+1145 584 lineto
+1145 620 lineto
+998 620 lineto
+closepath
+stroke
+gsave 10 dict begin
+1071 597 moveto 133 -0.5 (Marguerite buisson) alignedtext
+end grestore
+end grestore
+
+%	315 -> 290
+newpath 1015 659 moveto
+1024 650 1036 638 1046 627 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1048 629 moveto
+1053 620 lineto
+1044 625 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1048 629 moveto
+1053 620 lineto
+1044 625 lineto
+closepath
+stroke
+end grestore
+
+%	156
+gsave 10 dict begin
+newpath 2150 1144 moveto
+2307 1144 lineto
+2307 1180 lineto
+2150 1180 lineto
+closepath
+stroke
+gsave 10 dict begin
+2228 1165 moveto 143 -0.5 (Victoire Marie faure) alignedtext
+2228 1149 moveto 80 -0.5 (o ABT 1824) alignedtext
+end grestore
+end grestore
+
+%	179
+gsave 10 dict begin
+841 994 49 18 ellipse_path
+stroke
+gsave 10 dict begin
+841 989 moveto 77 -0.5 (x BEF 1864) alignedtext
+end grestore
+end grestore
+
+%	29 -> 179
+newpath 931 1056 moveto
+928 1053 924 1050 921 1048 curveto
+907 1036 889 1024 874 1014 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 876 1012 moveto
+866 1009 lineto
+873 1016 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 876 1012 moveto
+866 1009 lineto
+873 1016 lineto
+closepath
+stroke
+end grestore
+
+%	45
+gsave 10 dict begin
+newpath 578 888 moveto
+746 888 lineto
+746 940 lineto
+578 940 lineto
+closepath
+stroke
+gsave 10 dict begin
+662 925 moveto 154 -0.5 (Jean Antoine dantony) alignedtext
+662 909 moveto 79 -0.5 (o ABT 1808) alignedtext
+662 893 moveto 79 -0.5 (+ AFT 1866) alignedtext
+end grestore
+end grestore
+
+%	179 -> 45
+newpath 810 980 moveto
+788 970 757 956 729 944 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 731 942 moveto
+721 940 lineto
+729 947 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 731 942 moveto
+721 940 lineto
+729 947 lineto
+closepath
+stroke
+end grestore
+
+%	48
+gsave 10 dict begin
+newpath 764 888 moveto
+918 888 lineto
+918 940 lineto
+764 940 lineto
+closepath
+stroke
+gsave 10 dict begin
+841 925 moveto 140 -0.5 (Marie Julie mounier) alignedtext
+841 909 moveto 79 -0.5 (o ABT 1828) alignedtext
+841 893 moveto 79 -0.5 (+ AFT 1866) alignedtext
+end grestore
+end grestore
+
+%	179 -> 48
+newpath 841 976 moveto
+841 968 841 959 841 950 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 844 950 moveto
+841 940 lineto
+839 950 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 844 950 moveto
+841 940 lineto
+839 950 lineto
+closepath
+stroke
+end grestore
+
+%	159
+gsave 10 dict begin
+newpath 1821 1320 moveto
+2050 1320 lineto
+2050 1356 lineto
+1821 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+1935 1341 moveto 215 -0.5 (Marie Victoire Ursule monchal) alignedtext
+1935 1325 moveto 96 -0.5 (o 8 NOV 1848) alignedtext
+end grestore
+end grestore
+
+%	210
+gsave 10 dict begin
+2149 1250 71 18 ellipse_path
+stroke
+gsave 10 dict begin
+2149 1245 moveto 121 -0.5 (x BEF NOV 1848) alignedtext
+end grestore
+end grestore
+
+%	159 -> 210
+newpath 1979 1320 moveto
+2015 1305 2066 1284 2103 1269 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2103 1272 moveto
+2111 1265 lineto
+2101 1267 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2103 1272 moveto
+2111 1265 lineto
+2101 1267 lineto
+closepath
+stroke
+end grestore
+
+%	210 -> 153
+newpath 2133 1232 moveto
+2122 1219 2106 1201 2093 1187 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2095 1186 moveto
+2087 1180 lineto
+2092 1189 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2095 1186 moveto
+2087 1180 lineto
+2092 1189 lineto
+closepath
+stroke
+end grestore
+
+%	210 -> 156
+newpath 2165 1232 moveto
+2176 1219 2192 1201 2205 1187 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2206 1189 moveto
+2211 1180 lineto
+2203 1186 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2206 1189 moveto
+2211 1180 lineto
+2203 1186 lineto
+closepath
+stroke
+end grestore
+
+%	316
+gsave 10 dict begin
+929 530 27 18 ellipse_path
+stroke
+end grestore
+
+%	288 -> 316
+newpath 929 584 moveto
+929 576 929 567 929 558 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 932 558 moveto
+929 548 lineto
+927 558 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 932 558 moveto
+929 548 lineto
+927 558 lineto
+closepath
+stroke
+end grestore
+
+%	292
+gsave 10 dict begin
+newpath 819 440 moveto
+914 440 lineto
+914 476 lineto
+819 476 lineto
+closepath
+stroke
+gsave 10 dict begin
+866 453 moveto 81 -0.5 (Pierre astier) alignedtext
+end grestore
+end grestore
+
+%	316 -> 292
+newpath 915 514 moveto
+907 505 897 494 888 483 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 890 482 moveto
+882 476 lineto
+887 485 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 890 482 moveto
+882 476 lineto
+887 485 lineto
+closepath
+stroke
+end grestore
+
+%	294
+gsave 10 dict begin
+newpath 931 440 moveto
+1056 440 lineto
+1056 476 lineto
+931 476 lineto
+closepath
+stroke
+gsave 10 dict begin
+993 453 moveto 111 -0.5 (Marguerite berc) alignedtext
+end grestore
+end grestore
+
+%	316 -> 294
+newpath 943 514 moveto
+951 505 962 494 971 483 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 972 485 moveto
+977 476 lineto
+969 482 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 972 485 moveto
+977 476 lineto
+969 482 lineto
+closepath
+stroke
+end grestore
+
+%	162
+gsave 10 dict begin
+newpath 2067 1320 moveto
+2232 1320 lineto
+2232 1356 lineto
+2067 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+2149 1341 moveto 151 -0.5 (Marie Cécile monchal) alignedtext
+2149 1325 moveto 96 -0.5 (o 8 NOV 1848) alignedtext
+end grestore
+end grestore
+
+%	162 -> 210
+newpath 2149 1320 moveto
+2149 1308 2149 1291 2149 1277 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2152 1278 moveto
+2149 1268 lineto
+2147 1278 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2152 1278 moveto
+2149 1268 lineto
+2147 1278 lineto
+closepath
+stroke
+end grestore
+
+%	188
+gsave 10 dict begin
+1516 994 59 18 ellipse_path
+stroke
+gsave 10 dict begin
+1516 989 moveto 97 -0.5 (x 24 OCT 1871) alignedtext
+end grestore
+end grestore
+
+%	35 -> 188
+newpath 1515 1056 moveto
+1516 1046 1516 1033 1516 1022 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1519 1022 moveto
+1516 1012 lineto
+1514 1022 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1519 1022 moveto
+1516 1012 lineto
+1514 1022 lineto
+closepath
+stroke
+end grestore
+
+%	73
+gsave 10 dict begin
+newpath 1464 896 moveto
+1569 896 lineto
+1569 932 lineto
+1464 932 lineto
+closepath
+stroke
+gsave 10 dict begin
+1516 909 moveto 91 -0.5 (Joseph Julien) alignedtext
+end grestore
+end grestore
+
+%	188 -> 73
+newpath 1516 976 moveto
+1516 966 1516 953 1516 942 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1519 942 moveto
+1516 932 lineto
+1514 942 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1519 942 moveto
+1516 932 lineto
+1514 942 lineto
+closepath
+stroke
+end grestore
+
+%	76
+gsave 10 dict begin
+newpath 1602 896 moveto
+1758 896 lineto
+1758 932 lineto
+1602 932 lineto
+closepath
+stroke
+gsave 10 dict begin
+1680 917 moveto 142 -0.5 (Marie Victoire belles) alignedtext
+1680 901 moveto 97 -0.5 (o 31 DEC 1844) alignedtext
+end grestore
+end grestore
+
+%	188 -> 76
+newpath 1548 979 moveto
+1572 966 1606 950 1634 936 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1635 938 moveto
+1643 932 lineto
+1633 934 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1635 938 moveto
+1643 932 lineto
+1633 934 lineto
+closepath
+stroke
+end grestore
+
+%	319
+gsave 10 dict begin
+866 386 27 18 ellipse_path
+stroke
+end grestore
+
+%	292 -> 319
+newpath 866 440 moveto
+866 432 866 423 866 414 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 869 414 moveto
+866 404 lineto
+864 414 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 869 414 moveto
+866 404 lineto
+864 414 lineto
+closepath
+stroke
+end grestore
+
+%	297
+gsave 10 dict begin
+newpath 739 296 moveto
+849 296 lineto
+849 332 lineto
+739 332 lineto
+closepath
+stroke
+gsave 10 dict begin
+794 317 moveto 88 -0.5 (Claude astier) alignedtext
+794 301 moveto 96 -0.5 (o 16 JAN 1654) alignedtext
+end grestore
+end grestore
+
+%	319 -> 297
+newpath 851 371 moveto
+842 362 830 350 819 339 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 821 337 moveto
+812 332 lineto
+817 341 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 821 337 moveto
+812 332 lineto
+817 341 lineto
+closepath
+stroke
+end grestore
+
+%	299
+gsave 10 dict begin
+newpath 867 296 moveto
+1009 296 lineto
+1009 332 lineto
+867 332 lineto
+closepath
+stroke
+gsave 10 dict begin
+938 309 moveto 128 -0.5 (Marie ballandraud) alignedtext
+end grestore
+end grestore
+
+%	319 -> 299
+newpath 881 371 moveto
+890 362 902 350 913 339 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 915 341 moveto
+920 332 lineto
+911 337 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 915 341 moveto
+920 332 lineto
+911 337 lineto
+closepath
+stroke
+end grestore
+
+%	165
+gsave 10 dict begin
+newpath 2249 1320 moveto
+2428 1320 lineto
+2428 1356 lineto
+2249 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+2338 1341 moveto 165 -0.5 (Marie Victoire monchal) alignedtext
+2338 1325 moveto 93 -0.5 (o 10 FEB 1850) alignedtext
+end grestore
+end grestore
+
+%	165 -> 210
+newpath 2299 1320 moveto
+2268 1305 2225 1285 2192 1270 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2193 1268 moveto
+2183 1266 lineto
+2191 1272 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2193 1268 moveto
+2183 1266 lineto
+2191 1272 lineto
+closepath
+stroke
+end grestore
+
+%	185
+gsave 10 dict begin
+1868 994 49 18 ellipse_path
+stroke
+gsave 10 dict begin
+1868 989 moveto 77 -0.5 (x BEF 1874) alignedtext
+end grestore
+end grestore
+
+%	40 -> 185
+newpath 1734 1048 moveto
+1765 1036 1800 1022 1827 1011 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1827 1014 moveto
+1835 1007 lineto
+1825 1009 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1827 1014 moveto
+1835 1007 lineto
+1825 1009 lineto
+closepath
+stroke
+end grestore
+
+%	64
+gsave 10 dict begin
+newpath 1795 896 moveto
+1942 896 lineto
+1942 932 lineto
+1795 932 lineto
+closepath
+stroke
+gsave 10 dict begin
+1868 917 moveto 133 -0.5 (Jean Marie gaillard) alignedtext
+1868 901 moveto 79 -0.5 (o ABT 1839) alignedtext
+end grestore
+end grestore
+
+%	185 -> 64
+newpath 1868 976 moveto
+1868 966 1868 953 1868 942 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1871 942 moveto
+1868 932 lineto
+1866 942 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1871 942 moveto
+1868 932 lineto
+1866 942 lineto
+closepath
+stroke
+end grestore
+
+%	66
+gsave 10 dict begin
+newpath 1959 896 moveto
+2014 896 lineto
+2014 932 lineto
+1959 932 lineto
+closepath
+stroke
+gsave 10 dict begin
+1986 909 moveto 41 -0.5 (Marie) alignedtext
+end grestore
+end grestore
+
+%	185 -> 66
+newpath 1896 979 moveto
+1915 969 1939 955 1959 940 curveto
+1960 940 1960 939 1961 939 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1963 941 moveto
+1968 932 lineto
+1959 937 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1963 941 moveto
+1968 932 lineto
+1959 937 lineto
+closepath
+stroke
+end grestore
+
+%	320
+gsave 10 dict begin
+794 242 50 18 ellipse_path
+stroke
+gsave 10 dict begin
+794 237 moveto 78 -0.5 (x BEF 1654) alignedtext
+end grestore
+end grestore
+
+%	297 -> 320
+newpath 794 296 moveto
+794 288 794 279 794 270 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 797 270 moveto
+794 260 lineto
+792 270 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 797 270 moveto
+794 260 lineto
+792 270 lineto
+closepath
+stroke
+end grestore
+
+%	320 -> 303
+newpath 779 225 moveto
+772 216 763 205 754 195 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 756 194 moveto
+748 188 lineto
+753 197 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 756 194 moveto
+748 188 lineto
+753 197 lineto
+closepath
+stroke
+end grestore
+
+%	302
+gsave 10 dict begin
+newpath 801 152 moveto
+913 152 lineto
+913 188 lineto
+801 188 lineto
+closepath
+stroke
+gsave 10 dict begin
+857 165 moveto 98 -0.5 (François astier) alignedtext
+end grestore
+end grestore
+
+%	320 -> 302
+newpath 809 225 moveto
+817 216 826 205 835 195 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 836 197 moveto
+841 188 lineto
+833 194 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 836 197 moveto
+841 188 lineto
+833 194 lineto
+closepath
+stroke
+end grestore
+
+%	326
+gsave 10 dict begin
+857 98 27 18 ellipse_path
+stroke
+end grestore
+
+%	302 -> 326
+newpath 857 152 moveto
+857 144 857 135 857 126 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 860 126 moveto
+857 116 lineto
+855 126 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 860 126 moveto
+857 116 lineto
+855 126 lineto
+closepath
+stroke
+end grestore
+
+%	305
+gsave 10 dict begin
+newpath 747 8 moveto
+849 8 lineto
+849 44 lineto
+747 44 lineto
+closepath
+stroke
+gsave 10 dict begin
+798 29 moveto 88 -0.5 (Claude astier) alignedtext
+798 13 moveto 81 -0.5 (o ABT 1600) alignedtext
+end grestore
+end grestore
+
+%	326 -> 305
+newpath 844 82 moveto
+837 73 828 62 819 52 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 821 51 moveto
+813 44 lineto
+817 54 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 821 51 moveto
+813 44 lineto
+817 54 lineto
+closepath
+stroke
+end grestore
+
+%	307
+gsave 10 dict begin
+newpath 867 8 moveto
+968 8 lineto
+968 44 lineto
+867 44 lineto
+closepath
+stroke
+gsave 10 dict begin
+917 21 moveto 87 -0.5 (Marie faurie) alignedtext
+end grestore
+end grestore
+
+%	326 -> 307
+newpath 870 82 moveto
+878 73 887 62 896 52 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 898 54 moveto
+902 44 lineto
+894 51 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 898 54 moveto
+902 44 lineto
+894 51 lineto
+closepath
+stroke
+end grestore
+
+%	285
+gsave 10 dict begin
+newpath 1069 736 moveto
+1200 736 lineto
+1200 772 lineto
+1069 772 lineto
+closepath
+stroke
+gsave 10 dict begin
+1134 749 moveto 117 -0.5 (Catherine perrier) alignedtext
+end grestore
+end grestore
+
+%	52
+gsave 10 dict begin
+newpath 889 1232 moveto
+992 1232 lineto
+992 1268 lineto
+889 1268 lineto
+closepath
+stroke
+gsave 10 dict begin
+940 1253 moveto 89 -0.5 (Marius astier) alignedtext
+940 1237 moveto 80 -0.5 (o ABT 1892) alignedtext
+end grestore
+end grestore
+
+%	52 -> 327
+newpath 964 1232 moveto
+984 1217 1011 1196 1031 1181 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1031 1184 moveto
+1038 1176 lineto
+1028 1180 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1031 1184 moveto
+1038 1176 lineto
+1028 1180 lineto
+closepath
+stroke
+end grestore
+
+%	55
+gsave 10 dict begin
+newpath 2445 1312 moveto
+2575 1312 lineto
+2575 1364 lineto
+2445 1364 lineto
+closepath
+stroke
+gsave 10 dict begin
+2510 1349 moveto 112 -0.5 (Léon maisonnas) alignedtext
+2510 1333 moveto 77 -0.5 (o ABT 1871) alignedtext
+2510 1317 moveto 116 -0.5 (+ AFT FEB 1920) alignedtext
+end grestore
+end grestore
+
+%	59
+gsave 10 dict begin
+newpath 2593 1320 moveto
+2700 1320 lineto
+2700 1356 lineto
+2593 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+2646 1333 moveto 93 -0.5 (Père mounier) alignedtext
+end grestore
+end grestore
+
+%	60
+gsave 10 dict begin
+newpath 2717 1320 moveto
+2850 1320 lineto
+2850 1356 lineto
+2717 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+2783 1341 moveto 119 -0.5 (Romain mounier) alignedtext
+2783 1325 moveto 78 -0.5 (o ABT 1833) alignedtext
+end grestore
+end grestore
+
+%	266
+gsave 10 dict begin
+newpath 2867 1320 moveto
+2968 1320 lineto
+2968 1356 lineto
+2867 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+2917 1333 moveto 87 -0.5 (Joseph bayle) alignedtext
+end grestore
+end grestore
+
+%	62
+gsave 10 dict begin
+newpath 2985 1320 moveto
+3108 1320 lineto
+3108 1356 lineto
+2985 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+3046 1341 moveto 109 -0.5 (Joseph mounier) alignedtext
+3046 1325 moveto 79 -0.5 (o ABT 1836) alignedtext
+end grestore
+end grestore
+
+%	206
+gsave 10 dict begin
+1986 834 50 18 ellipse_path
+stroke
+gsave 10 dict begin
+1986 829 moveto 78 -0.5 (x BEF 1844) alignedtext
+end grestore
+end grestore
+
+%	66 -> 206
+newpath 1986 896 moveto
+1986 886 1986 873 1986 862 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1989 862 moveto
+1986 852 lineto
+1984 862 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1989 862 moveto
+1986 852 lineto
+1984 862 lineto
+closepath
+stroke
+end grestore
+
+%	206 -> 146
+newpath 1986 816 moveto
+1986 806 1986 793 1986 782 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1989 782 moveto
+1986 772 lineto
+1984 782 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1989 782 moveto
+1986 772 lineto
+1984 782 lineto
+closepath
+stroke
+end grestore
+
+%	206 -> 148
+newpath 2019 820 moveto
+2044 810 2080 794 2111 780 curveto
+2113 779 2116 778 2118 777 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2119 779 moveto
+2127 772 lineto
+2117 775 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2119 779 moveto
+2127 772 lineto
+2117 775 lineto
+closepath
+stroke
+end grestore
+
+%	70
+gsave 10 dict begin
+newpath 780 1056 moveto
+902 1056 lineto
+902 1092 lineto
+780 1092 lineto
+closepath
+stroke
+gsave 10 dict begin
+841 1077 moveto 108 -0.5 (Joseph dantony) alignedtext
+841 1061 moveto 80 -0.5 (o ABT 1866) alignedtext
+end grestore
+end grestore
+
+%	70 -> 179
+newpath 841 1056 moveto
+841 1046 841 1033 841 1022 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 844 1022 moveto
+841 1012 lineto
+839 1022 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 844 1022 moveto
+841 1012 lineto
+839 1022 lineto
+closepath
+stroke
+end grestore
+
+%	191
+gsave 10 dict begin
+1516 834 62 18 ellipse_path
+stroke
+gsave 10 dict begin
+1516 829 moveto 102 -0.5 (x 23 NOV 1841) alignedtext
+end grestore
+end grestore
+
+%	73 -> 191
+newpath 1516 896 moveto
+1516 886 1516 873 1516 862 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1519 862 moveto
+1516 852 lineto
+1514 862 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1519 862 moveto
+1516 852 lineto
+1514 862 lineto
+closepath
+stroke
+end grestore
+
+%	85
+gsave 10 dict begin
+newpath 1217 728 moveto
+1409 728 lineto
+1409 780 lineto
+1217 780 lineto
+closepath
+stroke
+gsave 10 dict begin
+1313 765 moveto 178 -0.5 (Jean Pierre Julien chalaye) alignedtext
+1313 749 moveto 77 -0.5 (o ABT 1814) alignedtext
+1313 733 moveto 76 -0.5 (+ AFT 1871) alignedtext
+end grestore
+end grestore
+
+%	191 -> 85
+newpath 1479 819 moveto
+1453 809 1419 795 1388 783 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1390 781 moveto
+1380 780 lineto
+1388 786 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1390 781 moveto
+1380 780 lineto
+1388 786 lineto
+closepath
+stroke
+end grestore
+
+%	89
+gsave 10 dict begin
+newpath 1427 728 moveto
+1610 728 lineto
+1610 780 lineto
+1427 780 lineto
+closepath
+stroke
+gsave 10 dict begin
+1518 765 moveto 169 -0.5 (Marie Julie Gustine astic) alignedtext
+1518 749 moveto 77 -0.5 (o ABT 1817) alignedtext
+1518 733 moveto 76 -0.5 (+ AFT 1871) alignedtext
+end grestore
+end grestore
+
+%	191 -> 89
+newpath 1516 816 moveto
+1516 808 1517 798 1517 789 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1520 790 moveto
+1517 780 lineto
+1515 790 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1520 790 moveto
+1517 780 lineto
+1515 790 lineto
+closepath
+stroke
+end grestore
+
+%	194
+gsave 10 dict begin
+1695 834 27 18 ellipse_path
+stroke
+end grestore
+
+%	76 -> 194
+newpath 1683 896 moveto
+1685 886 1688 873 1690 861 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1692 862 moveto
+1692 852 lineto
+1687 861 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1692 862 moveto
+1692 852 lineto
+1687 861 lineto
+closepath
+stroke
+end grestore
+
+%	94
+gsave 10 dict begin
+newpath 1627 736 moveto
+1764 736 lineto
+1764 772 lineto
+1627 772 lineto
+closepath
+stroke
+gsave 10 dict begin
+1695 757 moveto 123 -0.5 (Emmanuel baylle) alignedtext
+1695 741 moveto 77 -0.5 (o ABT 1812) alignedtext
+end grestore
+end grestore
+
+%	194 -> 94
+newpath 1695 816 moveto
+1695 806 1695 793 1695 782 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1698 782 moveto
+1695 772 lineto
+1693 782 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1698 782 moveto
+1695 772 lineto
+1693 782 lineto
+closepath
+stroke
+end grestore
+
+%	98
+gsave 10 dict begin
+newpath 1781 736 moveto
+1861 736 lineto
+1861 772 lineto
+1781 772 lineto
+closepath
+stroke
+gsave 10 dict begin
+1821 749 moveto 66 -0.5 (Catherine) alignedtext
+end grestore
+end grestore
+
+%	194 -> 98
+newpath 1715 822 moveto
+1732 811 1758 794 1781 780 curveto
+1783 779 1784 778 1786 777 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1786 780 moveto
+1793 772 lineto
+1783 776 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1786 780 moveto
+1793 772 lineto
+1783 776 lineto
+closepath
+stroke
+end grestore
+
+%	82
+gsave 10 dict begin
+newpath 1796 1056 moveto
+1942 1056 lineto
+1942 1092 lineto
+1796 1092 lineto
+closepath
+stroke
+gsave 10 dict begin
+1869 1077 moveto 132 -0.5 (Jules Régis gaillard) alignedtext
+1869 1061 moveto 90 -0.5 (o 2 JAN 1878) alignedtext
+end grestore
+end grestore
+
+%	82 -> 185
+newpath 1869 1056 moveto
+1868 1046 1868 1033 1868 1022 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1871 1022 moveto
+1868 1012 lineto
+1866 1022 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1871 1022 moveto
+1868 1012 lineto
+1866 1022 lineto
+closepath
+stroke
+end grestore
+
+%	198
+gsave 10 dict begin
+1313 674 48 18 ellipse_path
+stroke
+gsave 10 dict begin
+1313 669 moveto 74 -0.5 (x BEF 1814) alignedtext
+end grestore
+end grestore
+
+%	85 -> 198
+newpath 1313 728 moveto
+1313 719 1313 710 1313 702 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1316 702 moveto
+1313 692 lineto
+1311 702 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1316 702 moveto
+1313 692 lineto
+1311 702 lineto
+closepath
+stroke
+end grestore
+
+%	110
+gsave 10 dict begin
+newpath 1198 584 moveto
+1357 584 lineto
+1357 620 lineto
+1198 620 lineto
+closepath
+stroke
+gsave 10 dict begin
+1277 597 moveto 145 -0.5 (Joseph Régis chalaye) alignedtext
+end grestore
+end grestore
+
+%	198 -> 110
+newpath 1304 656 moveto
+1299 648 1294 638 1290 629 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1292 628 moveto
+1286 620 lineto
+1288 630 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1292 628 moveto
+1286 620 lineto
+1288 630 lineto
+closepath
+stroke
+end grestore
+
+%	111
+gsave 10 dict begin
+newpath 1374 584 moveto
+1559 584 lineto
+1559 620 lineto
+1374 620 lineto
+closepath
+stroke
+gsave 10 dict begin
+1466 597 moveto 171 -0.5 (Marie Magdeleine thiery) alignedtext
+end grestore
+end grestore
+
+%	198 -> 111
+newpath 1343 660 moveto
+1364 650 1395 636 1419 624 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1420 626 moveto
+1428 620 lineto
+1418 622 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1420 626 moveto
+1428 620 lineto
+1418 622 lineto
+closepath
+stroke
+end grestore
+
+%	195
+gsave 10 dict begin
+2295 674 47 18 ellipse_path
+stroke
+gsave 10 dict begin
+2295 669 moveto 73 -0.5 (x BEF 1815) alignedtext
+end grestore
+end grestore
+
+%	89 -> 195
+newpath 1610 728 moveto
+1839 686 2120 677 2238 675 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2238 678 moveto
+2248 675 lineto
+2238 673 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2238 678 moveto
+2248 675 lineto
+2238 673 lineto
+closepath
+stroke
+end grestore
+
+%	101
+gsave 10 dict begin
+newpath 2168 584 moveto
+2262 584 lineto
+2262 620 lineto
+2168 620 lineto
+closepath
+stroke
+gsave 10 dict begin
+2215 605 moveto 80 -0.5 (Joseph astic) alignedtext
+2215 589 moveto 79 -0.5 (o ABT 1789) alignedtext
+end grestore
+end grestore
+
+%	195 -> 101
+newpath 2276 657 moveto
+2266 648 2254 636 2242 626 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2244 625 moveto
+2235 620 lineto
+2241 628 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2244 625 moveto
+2235 620 lineto
+2241 628 lineto
+closepath
+stroke
+end grestore
+
+%	104
+gsave 10 dict begin
+newpath 2280 584 moveto
+2469 584 lineto
+2469 620 lineto
+2280 620 lineto
+closepath
+stroke
+gsave 10 dict begin
+2374 597 moveto 175 -0.5 (Marie Catherine fournier) alignedtext
+end grestore
+end grestore
+
+%	195 -> 104
+newpath 2313 657 moveto
+2324 648 2336 636 2347 626 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2348 628 moveto
+2354 620 lineto
+2345 625 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2348 628 moveto
+2354 620 lineto
+2345 625 lineto
+closepath
+stroke
+end grestore
+
+%	314
+gsave 10 dict begin
+1134 834 27 18 ellipse_path
+stroke
+end grestore
+
+%	276 -> 314
+newpath 1134 888 moveto
+1134 879 1134 870 1134 862 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1137 862 moveto
+1134 852 lineto
+1132 862 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1137 862 moveto
+1134 852 lineto
+1132 862 lineto
+closepath
+stroke
+end grestore
+
+%	314 -> 283
+newpath 1114 822 moveto
+1094 809 1063 791 1038 777 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1040 775 moveto
+1030 772 lineto
+1037 779 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1040 775 moveto
+1030 772 lineto
+1037 779 lineto
+closepath
+stroke
+end grestore
+
+%	314 -> 285
+newpath 1134 816 moveto
+1134 806 1134 793 1134 782 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1137 782 moveto
+1134 772 lineto
+1132 782 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1137 782 moveto
+1134 772 lineto
+1132 782 lineto
+closepath
+stroke
+end grestore
+
+%	106
+gsave 10 dict begin
+newpath 2233 736 moveto
+2358 736 lineto
+2358 772 lineto
+2233 772 lineto
+closepath
+stroke
+gsave 10 dict begin
+2295 757 moveto 111 -0.5 (Jean Marie astic) alignedtext
+2295 741 moveto 76 -0.5 (o ABT 1815) alignedtext
+end grestore
+end grestore
+
+%	106 -> 195
+newpath 2295 736 moveto
+2295 726 2295 713 2295 702 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2298 702 moveto
+2295 692 lineto
+2293 702 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2298 702 moveto
+2295 692 lineto
+2293 702 lineto
+closepath
+stroke
+end grestore
+
+%	113
+gsave 10 dict begin
+newpath 2375 736 moveto
+2468 736 lineto
+2468 772 lineto
+2375 772 lineto
+closepath
+stroke
+gsave 10 dict begin
+2421 757 moveto 75 -0.5 (Julien astic) alignedtext
+2421 741 moveto 79 -0.5 (o ABT 1828) alignedtext
+end grestore
+end grestore
+
+%	113 -> 195
+newpath 2392 736 moveto
+2373 724 2347 707 2327 695 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2330 694 moveto
+2320 690 lineto
+2327 698 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 2330 694 moveto
+2320 690 lineto
+2327 698 lineto
+closepath
+stroke
+end grestore
+
+%	116
+gsave 10 dict begin
+newpath 1009 1224 moveto
+1104 1224 lineto
+1104 1276 lineto
+1009 1276 lineto
+closepath
+stroke
+gsave 10 dict begin
+1056 1261 moveto 81 -0.5 (Marie astier) alignedtext
+1056 1245 moveto 76 -0.5 (o BEF 1892) alignedtext
+1056 1229 moveto 79 -0.5 (+ AFT 1980) alignedtext
+end grestore
+end grestore
+
+%	116 -> 327
+newpath 1056 1224 moveto
+1056 1213 1056 1201 1056 1189 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1059 1190 moveto
+1056 1180 lineto
+1054 1190 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1059 1190 moveto
+1056 1180 lineto
+1054 1190 lineto
+closepath
+stroke
+end grestore
+
+%	117
+gsave 10 dict begin
+newpath 1121 1224 moveto
+1220 1224 lineto
+1220 1276 lineto
+1121 1276 lineto
+closepath
+stroke
+gsave 10 dict begin
+1170 1261 moveto 85 -0.5 (Louise astier) alignedtext
+1170 1245 moveto 78 -0.5 (o AFT 1900) alignedtext
+1170 1229 moveto 82 -0.5 (+ ABT 1997) alignedtext
+end grestore
+end grestore
+
+%	117 -> 327
+newpath 1136 1224 moveto
+1119 1210 1097 1194 1081 1181 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1084 1180 moveto
+1074 1176 lineto
+1081 1184 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1084 1180 moveto
+1074 1176 lineto
+1081 1184 lineto
+closepath
+stroke
+end grestore
+
+%	119
+gsave 10 dict begin
+newpath 456 1320 moveto
+644 1320 lineto
+644 1356 lineto
+456 1356 lineto
+closepath
+stroke
+gsave 10 dict begin
+550 1341 moveto 174 -0.5 (Marie Augustine chalaye) alignedtext
+550 1325 moveto 103 -0.5 (o 17 MAY 1875) alignedtext
+end grestore
+end grestore
+
+%	119 -> 201
+newpath 506 1320 moveto
+468 1304 414 1282 376 1267 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 378 1265 moveto
+368 1263 lineto
+376 1270 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 378 1265 moveto
+368 1263 lineto
+376 1270 lineto
+closepath
+stroke
+end grestore
+
+%	167
+gsave 10 dict begin
+1419 1338 58 18 ellipse_path
+stroke
+gsave 10 dict begin
+1419 1333 moveto 95 -0.5 (x 12 FEB 1920) alignedtext
+end grestore
+end grestore
+
+%	167 -> 10
+newpath 1399 1321 moveto
+1387 1310 1370 1296 1355 1283 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1357 1281 moveto
+1348 1276 lineto
+1353 1285 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1357 1281 moveto
+1348 1276 lineto
+1353 1285 lineto
+closepath
+stroke
+end grestore
+
+%	167 -> 19
+newpath 1437 1321 moveto
+1448 1310 1462 1296 1476 1282 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1477 1285 moveto
+1482 1276 lineto
+1473 1281 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 1477 1285 moveto
+1482 1276 lineto
+1473 1281 lineto
+closepath
+stroke
+end grestore
+
+%	204
+gsave 10 dict begin
+711 1338 49 18 ellipse_path
+stroke
+gsave 10 dict begin
+711 1333 moveto 76 -0.5 (x BEF 1863) alignedtext
+end grestore
+end grestore
+
+%	204 -> 137
+newpath 693 1321 moveto
+679 1308 659 1290 644 1274 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 646 1273 moveto
+637 1268 lineto
+643 1276 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 646 1273 moveto
+637 1268 lineto
+643 1276 lineto
+closepath
+stroke
+end grestore
+
+%	204 -> 140
+newpath 729 1321 moveto
+743 1308 763 1290 778 1274 curveto
+stroke
+gsave 10 dict begin
+solid
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 779 1276 moveto
+785 1268 lineto
+776 1273 lineto
+closepath
+fill
+0.000 0.000 0.000 edgecolor
+newpath 779 1276 moveto
+785 1268 lineto
+776 1273 lineto
+closepath
+stroke
+end grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+end
+restore
+%%EOF

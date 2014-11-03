@@ -1,0 +1,230 @@
+/* Otherwise strange space appear under Firefox */
+.include { 
+  visibility: hidden;
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+
+#intro { 
+  
+}
+
+#logo { 
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 160px;
+  text-align: center;
+}
+
+#logo img {
+  border: none;
+  width: 140px;
+}
+
+#logo a { 
+  color: black;
+  text-decoration: none;
+  border: none;/* See A*/
+}
+
+#menu {
+  position: absolute; 
+  top: 120px; 
+  left: 0px;
+  width: 150px;
+/*  display: block;*/
+  border: 2px solid #3E3C4F;
+  background-color: #BE9C73;
+}
+
+h1 {
+  text-align: center;
+  color: #3E3C4F;	
+}
+
+h2 { 
+  text-indent: 1em;
+  color: #3E3C4F;
+}
+
+h3 { 
+  text-indent: 1.2em;
+  color: #3E3C4F;
+}
+
+#menu li {
+/*  display: inline;*/
+  list-style-type: none;
+/*  text-transform: capitalize;*/
+} 
+
+#menu a { 
+  display: inline;
+  text-decoration: none;
+  border: none; /* See A*/
+/*  color: #FF8000;  for MSIE */
+/*  color: inherit;*/
+}
+
+#menu a:hover { 
+  text-decoration: underline;
+}
+
+
+.menu { 
+  margin: 2px;
+  padding: 0.3em;
+  padding-left: 0em;
+}
+
+.menu li {
+  /*background-color: white;*/
+  background-color: #BE9C73;
+  margin: 2px;
+  padding: 3px;
+  font-weight: bold;
+}
+
+.menutitle { 
+  text-align: center;
+  background-color: #E87F3B;
+  font-weight: bold;
+  padding: 5px;
+}
+
+
+
+/*
+#content a[hreflang="en"]:after {
+	content: " " ""url("en.jpg")
+}
+
+#content a[hreflang="fr"]:after {
+	content: " " ""url("fr.jpg");
+}
+
+#content a[hreflang="de"]:after {
+	content: " (" attr(href) url("de.jpg") ")";
+}*/
+
+.external {
+  padding-right:13px;
+  background:transparent url(externalgrey.png) right 0 no-repeat;
+}
+
+.external:hover {
+  background:transparent url(external.png) right 0 no-repeat;
+}
+
+.ogg { 
+  padding-right:20px;
+  background:transparent url(xiph.png) right 0 no-repeat;
+}
+
+.dos {
+  color: white;
+  background-color: black;
+}
+
+.code {
+  color:#3E3C4F;
+}
+
+.file { 
+
+}
+
+#accueil #logotext { 
+  visibility: hidden;
+}
+
+.cvcell{
+  text-align: justify;
+  padding: 5px;
+}
+
+.cvsoustitre {
+  text-align: right;
+  vertical-align: top;
+  padding: 5px;
+}
+
+.cvtitre{
+  font-size: +1em;
+  font-weight: bolder;
+  background-color: #E87F3B;
+  padding-left: 0.5em;
+}
+
+.cvtitle{
+  text-align: center;
+  font-size: +2em;
+}
+
+.cvname {
+  font-size: +2em;
+}
+
+
+#bonnepaire .undiscovered {
+  background-color: #E87F3B;
+}
+
+#bonnepaire .discovered {
+  background-color: #4072B5;
+}
+
+.liste { 
+  background-color: white;
+}
+
+div.liste { 
+  border: 1px solid #3E3C4F;
+}
+
+#rdfiframe {
+  visibility: hidden;
+  height: 1px;
+}
+
+.livres { 
+  -moz-border-radius: 0.5em;
+  margin: 0.5em;
+}
+
+.livres legend { 
+  font-weight: bold;
+}
+
+.livres {
+  list-style-image: url('book.png')
+}
+
+.dvd {
+  list-style-image: url('dvd.png');
+}
+
+.robot {
+  list-style-image: url('robot.png');
+}
+
+.livre { 
+  font-style: italic;
+}
+
+.small { 
+  font-size: 0.5em;
+}
+
+a {
+  color: #4D3BE8;
+  border-bottom: solid 1px #4D3BE8; /* See http://www.smashingmagazine.com/2008/08/11/top-ten-web-typography-sins/ */
+  text-decoration: none;
+}
+
+a:visited {
+  color: #4072B5;
+  border-bottom: solid 1px #4072B5;
+}

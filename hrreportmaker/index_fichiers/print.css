@@ -1,0 +1,48 @@
+
+html, body {
+  height: 100%;
+}
+#menu { 
+  visibility: hidden;
+}
+
+#footer { 
+  visibility: hidden;
+}
+
+#content { 
+  border: none;
+}
+
+#logotext { 
+  visibility: hidden;
+}
+
+#logo { 
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+#logo img {
+  border: none;
+}
+
+h1 {
+/*  color: #0066FF;*/
+  text-align: center;
+}
+
+h2 { 
+  text-indent: 1em;
+}
+
+#content a:link:after, #content a:visited:after {
+  content: " (" attr(href) ") ";
+  font-size: 90%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
