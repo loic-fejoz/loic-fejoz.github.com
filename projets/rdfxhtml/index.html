@@ -1,0 +1,81 @@
+<!--?xml version="1.0" encoding="iso-8859-1"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dc="http://purl.org/dc/elements/1.1/" lang="fr"><head>
+    <meta http-equiv="Content-type" content="text/html; charset=windows-1252">
+    <meta name="Author" content="Loïc Fejoz" lang="fr">
+    <meta name="date" content="2008-08-30T15:20:47+00:00">
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <link rel="Help" href="http://loic.fejoz.free.fr/help/" accesskey="0">
+    <meta name="DC.Title" content="RDF in XHTML" lang="fr">
+    <meta name="DC.Date.created" scheme="W3CDTF" content="2008-08-30">
+    <meta name="DC.Language" scheme="RFC3066" content="fr-FR">
+    <title>Fejoz - RDF in XHTML</title>
+    <link rel="Stylesheet" type="text/css" href="index_fichiers/style.css" media="print,screen">
+    <link rel="Stylesheet" type="text/css" href="index_fichiers/print.css" media="print">
+    <link rel="Stylesheet" type="text/css" href="index_fichiers/screen.css" media="screen">
+    <link rel="author" href="http://loic.fejoz.net/" xml:lang="fr-FR" title="Loïc Fejoz">
+    <link rel="shortcut icon" type="image/x-icon" href="/logo.ico">
+    <link rel="Search" href="http://www.google.fr/search?hl=fr&amp;q=site%3Aloic.fejoz.free.fr&amp;btnG=Recherche+Google&amp;meta=">
+	<link rel="alternate" type="application/rss+xml" title="research publications" href="http://hal.inria.fr/rss.php?from=all&amp;author=Fejoz">
+    <link rel="alternate" type="application/atom+xml" title="blog mariage" href="http://prepasdumariagedetinote.blogspot.com/feeds/posts/default">
+    <link rel="alternate" type="application/atom+xml" title="blog maison" href="http://yermat.blogspot.com/feeds/posts/default">
+
+    <script type="text/javascript" src="showrdf.js" ></script>
+  </head>    
+  <body id="rdfxhtml" onload="loadReferer();">
+    <div id="container">
+      <div id="content">
+        <h1>RDF in XHTML</h1>
+            <p>Ceci est un exemple de comment insérer du RDF dans du XHTML selon la recommandation W3C <a class="external" href="http://www.w3.org/TR/xhtml-rdfa-primer/">RDF/A Primer 1.0 Embedding RDF in XHTML</a>. Et puis cela me permet aussi d'illustrer Ajax pour la récupération des triplets RDF.</p>
+
+
+
+    <p about="http://www.fejoz.net/loic"><span class="cvname" property="foaf:name">Fejoz Loïc</span><br>
+
+      62 route de Gogney<br>
+
+      57830 Foulcrey<br>
+
+      Téléphone&nbsp;: <a rel="foaf:phone" href="tel:+33.6.75.06.62.65">+33 (0)6 75 06 62 65</a><br>
+
+      Email&nbsp;: <a href="mailto:loic@fejoz.net" rel="foaf:mbox">loic@fejoz.net</a></p>
+
+
+
+<label for="url">url</label>&nbsp;: <input id="url" name="url" value="/rdfxhtml/" type="text"><br>
+
+<input value="show rdf triple" onclick="showUrlTriple();return false;" onkeypress="showUrlTriple();return false;" type="button"><br>
+
+
+
+<table id="rdftable">
+</table>
+
+
+
+<iframe id="rdfiframe" title="RDF serialization result" src=""> </iframe>
+
+
+
+<a href="showrdf.js">View the javascript</a>
+
+      </div><!-- div content -->
+      <div id="intro">
+        <div id="logo">
+	<a id="logoimg" href="/" title="Page d'accueil de Loïc Fejoz"><img src="index_fichiers/logo.gif" alt="Accueil Fejoz.net" height="78" width="140"></a>
+<br>
+          <a id="logotext" href="/" title="Page d'accueil de Loïc Fejoz" accesskey="x">Accueil</a>
+        </div>
+      </div><!-- div  intro -->
+      <div id="footer"><div class="contact vcard" about="http://www.fejoz.net/loic">
+	<address><span class="fn n" id="loic" property="foaf:name">Loïc Fejoz</span> <a href="mailto:loic@fejoz.net" rel="foaf:mbox" class="email">loic@fejoz.net</a></address></div>
+	<!-- Created: Sat Feb 25 14:44:44 CET 2006 -->
+	<!-- hhmts start -->
+	Dernière Modification : Sat Aug 30 15:20:47 GMT 2008
+        <!-- hhmts end --><br>
+      </div> <!-- div footer -->
+      <div id="cssdiv1"></div>
+    </div> <!-- div container -->
+  
+
+</body></html>

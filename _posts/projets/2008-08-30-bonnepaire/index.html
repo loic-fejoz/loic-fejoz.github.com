@@ -1,0 +1,35 @@
+---
+layout: post
+title:  Bonne paire
+categories: project
+author: Loïc
+lang: fr
+---
+
+<script language="JavaScript" type="text/javascript" src="/projets/bonnepaire/bonnepaire.js">/*pourquoi ca marche pas sinon ? */</script>
+   <h2><span id="game">sexy</span></h2>
+
+    <p>Retrouvez votre jeu de mémoire favoris de quand vous étiez petit mais adapté à des adultes.<br/>
+
+      But : Trouver la bonne paire en associant les images deux par deux. :-D<br/>
+
+      Cliquez sur les cases pour trouver la bonne paire.</p>
+
+    <p>Vous en êtes à <span id="nbClics">0</span> essais et il vous reste à trouver <span id="nbImages">?</span> images.</p>
+
+
+
+    <form>
+
+      <input type="button" value="sexy" onClick="sexy();playAgain();setTitle('sexy');"/>
+
+      <input type="button" value="tux" onClick="tux();playAgain();setTitle('tux');"/>
+
+
+    </form>
+
+    <table id="grid" border="1"></table>
+
+
+
+    <p>Ce jeux est inspiré du logiciel <a class="external" href="http://www.dmsofts.com/adulte.php">La bonne paire</a> par <a class="external" href="http://www.dmsofts.com/">dmsofts</a>.</p>

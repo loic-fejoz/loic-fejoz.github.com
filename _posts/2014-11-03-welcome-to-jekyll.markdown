@@ -2,7 +2,7 @@
 layout: post
 title:  "Jekyll again!"
 date:   2014-11-03 16:20:49
-categories: jekyll update
+categories: news
 author: Loïc
 lang: en
 ---
