@@ -7,7 +7,7 @@
    xmlns:lj="http://www.livejournal.org/rss/lj/1.0/"
    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <foaf:Person rdf:ID="me" rdf:about="http://loic.fejoz.net">
+  <foaf:Person rdf:about="http://loic.fejoz.net">
     <foaf:name>Loïc Fejoz</foaf:name>
     <foaf:title>Dr Eng</foaf:title>
     <foaf:givenname>Loïc</foaf:givenname>
