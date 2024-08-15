@@ -1,0 +1,2 @@
+- xref:angelus.adoc[]
+- xref:foo.adoc[]

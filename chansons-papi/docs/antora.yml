@@ -1,0 +1,5 @@
+name: 'chansons-papi'
+version: ~
+title: 'Chansons Louis Gelloz'
+nav:
+- modules/ROOT/nav.adoc

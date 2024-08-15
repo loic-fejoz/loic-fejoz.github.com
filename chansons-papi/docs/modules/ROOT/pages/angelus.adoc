@@ -1,16 +1,15 @@
----
-layout: post
-category : chansons
-tags : [chanson, papi-louis]
-lang: fr
----
-<p>Chanson de 1894, paroles et musique de <a href="http://fr.wikipedia.org/wiki/L%C3%A9on_Durocher">Léon Durocher</a> &amp; <a href="http://fr.wikipedia.org/wiki/Gustave_Goublier">Gustave Goublier</a></p>
-<p><audio controls ><br />
-  <source src="/chansons/2007-10-18-l-angelus-de-la-mer.ogg"/><br />
-</audio><br />
-<a class="ogg" href="/chansons/2007-10-18-l-angelus-de-la-mer.ogg">Écoutez l&#8217;Angélus de la mer</a> par Louis Gelloz, mon grand-père.</p>
+= L'angelus de la mer
 
-<pre class="paroles">A l'horizon se lève et rit l'aube vermeille
+[.lead]
+Chanson de 1894, paroles et musique de http://fr.wikipedia.org/wiki/L%C3%A9on_Durocher[Léon Durocher] &amp; http://fr.wikipedia.org/wiki/Gustave_Goublier[Gustave Goublier]
+
+audio::../_attachments/2007-10-18-l-angelus-de-la-mer.ogg[opts=controls]
+
+[.lead]
+xref:attachment$2007-10-18-l-angelus-de-la-mer.ogg[Écoutez l&#8217;Angélus de la mer] par Louis Gelloz, mon grand-père.
+
+[%hardbreaks]
+A l'horizon se lève et rit l'aube vermeille
 Marins perdus en mer,
 Voici l'heure où là-bas le vieux clocher s'éveille
 Et chante au matin clair.
@@ -19,12 +18,14 @@ Tinte l'écho des cloches du pays ?
 Les flots joyeux que la lumière embrase
 Ondulent plus blonds que les blonds épis.
 
+[%hardbreaks]
 Refrain :
 Au loin c'est l'Angelus, c'est l'Angelus qui sonne,
 A genoux donc sous le ciel bleu, à genoux donc et priez Dieu
 Laboureurs de la mer et que le jour rayonne,
 C'est l'Angelus, c'est l'Angelus, c'est l'Angelus !
 
+[%hardbreaks]
 Les flots mourants du jou ont empourpré nos voiles
 Marins perdus en mer
 Voici l'heure où là-bas scintillent les étoiles
@@ -33,6 +34,7 @@ Entendez-vous, dans la brise qui rêve,
 Des sons divins qui semblent s'approcher
 Le paysan, dont le labeur s'achève, Ecoute, pensif, la voix du vieux clocher.
 
+[%hardbreaks]
 Refrain :
 Au loin c'est l'Angelus, c'est l'Angelus qui sonne,
 A genoux donc sous le ciel bleu, à genoux donc et priez dieu

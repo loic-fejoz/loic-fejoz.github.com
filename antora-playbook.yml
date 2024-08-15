@@ -1,0 +1,18 @@
+site:
+  title: Loïc - F4JXQ
+  start_page: site-web-loic::index.adoc
+content:
+  sources:
+  - url: ./
+    start_path: site-web/docs  
+  - url: https://gitlab.com/antora/demo/demo-component-a.git
+    branches: HEAD
+  - url: https://gitlab.com/antora/demo/demo-component-b.git
+    branches: [v2.0, v1.0]
+    start_path: docs
+  - url: ./
+    start_path: chansons-papi/docs
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true

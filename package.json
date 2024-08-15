@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "antora": "3.1.9"
+  },
+  "overrides": {
+	"asciidoctor-opal-runtime": {
+    		"glob": "~10.4"
+  	}
+  }
+}

@@ -1,0 +1,4 @@
+= Accueil
+
+* Chansons
+** xref:chansons-papi::angelus.adoc[L'Angelus de la mer]
