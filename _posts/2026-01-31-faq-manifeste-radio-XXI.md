@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Foire Aux Questions du Manifeste Radioamateur"
-date: 2026-01-31 17:34:00
+date: 2026-01-31 16:34:00
 author: Loïc
 tags : [radio]
-lang: en
+lang: fr
 categories: radio
 ---
 
