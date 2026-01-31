@@ -8,6 +8,7 @@ lang: fr
 categories: radio
 ---
 
+*Read this manifesto in [English]({{ site.baseurl }}/radio/2026/01/31/hamradio-manifesto).*
 
 L'approche actuelle du radioamateurisme, centrée sur la communication
 et sur l'assistance en cas de catastrophe, ne suffit plus à attirer les profils techniques actuels.
@@ -56,7 +57,7 @@ L'objectif est de compléter le trafic traditionel pour plus d'expérimentation 
   et images sans aucune dépendance aux infrastructures critiques ou à Internet.
 * **Négociation dynamique de protocoles -- Hailing** : Instaurer des canaux d'appel (hailing) intelligents.
   En annonçant dynamiquement les détails, modulation et couches applicatives, du protocole utilisé
-  (via des initiatives comme HQFBP et ses annonces), nous permettons une agilité et une diversité
+  (via des initiatives comme [HQFBP](https://github.com/loic-fejoz/hqfbp) et [ses annonces](https://github.com/loic-fejoz/hqfbp/blob/main/HAILING.md)), nous permettons une agilité et une diversité
   de modes sans précédent, tout en gardant une interopérabilité.
 * **Amateur Radio as a Service** : démocratiser l'accès aux ondes pour les opérateurs 
   sans possibilité d'antennes fixes via des réseaux de stations distantes partagées dans le cloud.

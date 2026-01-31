@@ -1,7 +1,14 @@
+---
+layout: post
+title: "Foire Aux Questions du Manifeste Radioamateur"
+date: 2026-01-31 17:34:00
+author: Loïc
+tags : [radio]
+lang: en
+categories: radio
+---
 
-# FAQ.md — Foire Aux Questions du Manifeste Radioamateur
-
-Ce document répond aux interrogations soulevées par la transition du radioamateurisme vers une logique de création et d'innovation technique au XXIe siècle.
+Ce document répond aux interrogations soulevées par la transition du radioamateurisme vers une logique de création et d'innovation technique au XXIe siècle évoquée dans [mon manifeste]({{ site.baseurl }}/radio/2026/01/31/manifeste-radio-XXI).
 
 ## Philosophie et Approche Technique
 
@@ -44,14 +51,10 @@ La simplicité de l'analogique est une force pour la liaison voix, mais ses capa
 
 C'est l'inverse : elle transforme le terrain en un banc d'essai rigoureux. Les activités de type SOTA ou POTA imposent des contraintes réelles (énergie limitée, antennes portables, environnement EM variable) idéales pour valider la robustesse d'un nouveau protocole ou d'un matériel. L'aspect ludique via des applications mobiles est un vecteur d'engagement ; le fond reste une validation de performance en conditions dégradées.
 
-### 9. Comment inclure les traditionalistes dans cette vision ?
+### 9. Comment inclure les "traditionalistes" dans cette vision ?
 
 L'inclusion repose sur la complémentarité des compétences :
 
-* **La maîtrise du support :** Les traditionalistes possèdent l'expertise vitale de la physique des ondes, de la propagation et de l'adaptation d'antennes.
+* **La maîtrise du support :** Les "traditionalistes" possèdent l'expertise vitale de la physique des ondes, de la propagation et de l'adaptation d'antennes.
 * **La maîtrise du flux :** Les nouveaux profils apportent l'expertise du traitement numérique et du réseau.
 Une *stack* logicielle innovante est inutile sans une antenne optimisée. Le manifeste encourage le mentorat croisé : l'ancien devient l'architecte du lien physique, et le nouveau l'architecte de la donnée. C'est l'union du "savoir l'onde" et du "savoir le code".
-
----
-
-**Souhaitez-vous que je génère également un modèle de "Charte de Collaboration Intergénérationnelle" pour définir plus précisément comment ces deux profils peuvent travailler ensemble sur un projet concret ?**
