@@ -1,10 +1,9 @@
 # Site settings
-title: Fejoz
+title: Loïc Fejoz - F4JXQ
 email: loic@fejoz.net
 description: "Est sempter altera via melior"
 baseurl: ""
 url: "http://www.fejoz.net"
-twitter_username: loic_fejoz
 github_username:  loic-fejoz
 
 # Build settings

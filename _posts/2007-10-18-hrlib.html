@@ -1,0 +1,51 @@
+---
+layout: post
+title: "hrlib"
+date: 2007-10-18 18:09:09
+author: Loïc
+tags : [genealogie]
+lang: fr
+category: généalogie
+---
+
+<p>Librairie Python pour lire les fichiers de Heredis.</p>
+
+<h2>Sourceforge</h2>
+<p>Je me suis enfin décidé à passer le logiciel en libre. Retrouvez <a href="http://hrlib.sourceforge.net/">hrlib sur
+        sourceforge</a>.</p>
+
+<h2>Download</h2>
+<table class="fileTable">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Taille</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="fileCell"><a href="/hrlib/Heredis-0.2.3.zip" title="Heredis-0.2.3.zip">Heredis-0.2.3.zip</a></td>
+            <td class="fileCell">35460</td>
+            <td class="fileCell">2007-03-20T09:02:34Z</td>
+        </tr>
+        <tr>
+            <td class="fileCell"><a href="/hrlib/Heredis-0.2.3.win32.exe"
+                    title="Heredis-0.2.3.win32.exe">Heredis-0.2.3.win32.exe</a></td>
+            <td class="fileCell">60183</td>
+            <td class="fileCell">2007-03-20T09:02:34Z</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Exemples en Python</h2>
+<pre class="code">import Heredis
+import sys
+#ouvre le fichier passé en paramètre
+hf = Heredis.openHeredisFile(sys.argv[1])
+#écrit le dictionnaire des noms
+for name in hf.getTable('TH5TableDicoNoms'):
+    print name.getId(),'\t',name.name
+#on ferme le fichier
+hf.close
+</pre>

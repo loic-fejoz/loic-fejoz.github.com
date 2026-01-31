@@ -4,17 +4,27 @@ layout: default
 
 <div class="home">
 
-  <h1>Posts</h1>
+  <h2>Sujets</h2>
+
+  <p>
+    {% for category in site.categories %}
+    {{ category[0] }},
+    {% endfor %}
+  </p>
+
+  <h2>Posts</h2>
 
   <ul class="posts">
     {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: " %-d %B %Y" }}</span>
-        <a class="post-link" href="{% if post.externallink %}{{ post.externallink }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a>
-      </li>
+    <li>
+      <span class="post-date">{{ post.date | date: " %-d %B %Y" }}</span>
+      <a class="post-link"
+        href="{% if post.externallink %}{{ post.externallink }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{
+        post.title }}</a>
+    </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

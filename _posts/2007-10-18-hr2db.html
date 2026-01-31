@@ -1,0 +1,94 @@
+---
+layout: post
+title: "hr2db"
+date: 2007-10-18 18:09:09
+author: Loïc
+tags : [genealogie]
+lang: fr
+category: généalogie
+---
+
+<p>Import d'un fichier Heredis dans une base de données (MySQL, Access, Gadfly).</p>
+
+<h2>Download</h2>
+<table class="fileTable">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Taille</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="fileCell"><a href="/hr2db/Heredis2Database-0.0.5.exe.zip"
+                    title="Heredis2Database-0.0.5.exe.zip">Heredis2Database-0.0.5.exe.zip</a></td>
+            <td class="fileCell">881055</td>
+            <td class="fileCell">2006-04-06T13:53:42Z</td>
+        </tr>
+        <tr>
+            <td class="fileCell"><a href="/hr2db/Heredis2Database-0.0.5-source.zip"
+                    title="Heredis2Database-0.0.5-source.zip">Heredis2Database-0.0.5-source.zip</a></td>
+            <td class="fileCell">14986</td>
+            <td class="fileCell">2006-04-06T13:53:42Z</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Fonctionnalités</h2>
+<ul>
+    <li>Export vers une base MYSQL,</li>
+    <li>Export vers une base ACCESS (via ODBC),</li>
+    <li>Export vers une base Gadfly.</li>
+</ul>
+
+<h2>Évolution(s)</h2>
+<ul>
+    <li>0.0.5 : Ajout de l'option --list qui permet d'indiquer les tables à utiliser.</li>
+    <li>0.0.4 : Modification du SQL généré pour MySQL en rajoutant une clef primaire non nulle.</li>
+    <li>0.0.3 : Créer un fichier de log plus conséquent pour la résolution de problème.</li>
+    <li>0.0.2 : exporte correctement le type des événements. Le champ "private" des adresses est maintenant un champ
+        Oui/Non sous Access.</li>
+</ul>
+
+<h2>A venir</h2>
+<p>Le programme inverse ? ;-)</p>
+<p>Le mettre sur sourceforge (noter qu'en attendant les sources sont sous licences GPL).</p>
+
+<h2>Installation</h2>
+<p>Dézipper le fichier dans un répertoire quelconque (ex : c:\Heredis2Database) et c'est tout.</p>
+<p>Pour Access, aller voir <a class="external"
+        href="http://perso.wanadoo.fr/bardou/michel/basedonnees/accessodbc.htm">accessodbc de Michel Bardou</a> pour
+    faire une connexion ODBC.</p>
+<p>Pour tester avec MySQL, je vous recommande <a class="external"
+        href="http://www.easyphp.org/">http://www.easyphp.org</a>.</p>
+
+<h2>Utilisation</h2>
+<p>Pour plus de détails sur les tables créées, je vous conseille de faire un tour sur <a href="/formatheredis/">le
+        format d'Heredis</a>.</p>
+<p>Ceci a été testé avec des fichiers hr5 et des fichiers hr7. Le plus gros fichier contenait plus de 50 000 individus
+    et l'export a été fait en moins de 8mn !</p>
+
+<p>Exemple :</p>
+<pre class="dos">
+C:\Heredis2Gedcom&gt;Heredis2Database --help
+usage: Heredis2Database [options] fichier_heredis database_name
+options:
+  -h, --help            show this help message and exit
+  -tTYPE, --type=TYPE   type de la base de donnees : MYSQL [default], ACCESS,
+                        ODBC, GADFLY
+  -mHOST, --host=HOST   machine de la base de donnees
+  -uUSER, --user=USER   utilisateur de connexion a la base
+  -pPASSWORD, --password=PASSWORD
+                        mot de passe de l'utilisateur de connexion
+  -r, --replace         remplace la definition des tables existantes
+  -f, --flush           vide les tables avant de les remplir
+  -lTABLES, --list=TABLES
+                        liste des tables a inserer/mettre a jour
+Exemple :
+Heredis2Database -tMYSQL -uloic -ploicpassword -f fejoz.hr7 fejoz
+Heredis2Database -tMYSQL -uloic -f fejoz.hr7 fejoz
+Heredis2Database -tACCESS fejoz.hr5 fejoz
+Heredis2Database -tGADFLY fejoz.hr5 fejoz
+Heredis2Database -lSource,Adresse fejoz.hr5 fejoz
+</pre>
