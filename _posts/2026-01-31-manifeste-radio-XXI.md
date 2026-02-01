@@ -14,7 +14,7 @@ L'approche actuelle du radioamateurisme, centrée sur la communication
 et sur l'assistance en cas de catastrophe, ne suffit plus à attirer les profils techniques actuels.
 Ce manifeste définit une transition stratégique : passer de l'usage passif
 à la conception de systèmes de communication résilients et innovants.
-Il doit redevenir ce qu'il était à son origine :l'avant-garde de l'expérimentation hertzienne.
+Il doit redevenir ce qu'il était à son origine : l'avant-garde de l'expérimentation hertzienne.
 Ce manifeste propose de revenir à une logique de construction en transformant le spectre radio
 en un laboratoire d'innovation global.
 
@@ -82,3 +82,4 @@ de répondre à de nombreux défis d'innovation technique et d'usages. Cette com
 qui maintient l'outil prêt pour l'urgence.
 Paradoxalement, c'est par cette mue créative que **le radioamateurisme retrouvera alors sa pleine utilité !**
 
+*Lire aussi le complément [Foire Aux Questions]({{ site.baseurl }}/radio/2026/01/31/faq-manifeste-radio-XXI).*
