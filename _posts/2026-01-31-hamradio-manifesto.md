@@ -6,6 +6,7 @@ author: Loïc
 tags : [radio]
 lang: en
 categories: radio
+summary: English version of the Hamradio Manifesto for the 21st century, focusing on creativity, SDR, and open technology stacks.
 ---
 
 *Lire ce manifeste en [Français]({{ site.baseurl }}/radio/2026/01/31/manifeste-radio-XXI).*

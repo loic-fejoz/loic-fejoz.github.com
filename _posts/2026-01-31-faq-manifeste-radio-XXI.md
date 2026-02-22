@@ -6,6 +6,7 @@ author: Loïc
 tags : [radio]
 lang: fr
 categories: radio
+summary: Questions fréquentes entourant le manifeste radioamateur du XXIe siècle, abordant la philosophie SDR, le code et l'innovation.
 ---
 
 Ce document répond aux interrogations soulevées par la transition du radioamateurisme vers une logique de création et d'innovation technique au XXIe siècle évoquée dans [mon manifeste]({{ site.baseurl }}/radio/2026/01/31/manifeste-radio-XXI).

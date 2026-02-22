@@ -6,6 +6,7 @@ author: Loïc
 tags : [radio, antenne, meshtastic]
 lang: fr
 categories: radio
+summary: Construction d'une antenne J-Pole économique pour la bande 868 MHz (LoRa, Helium) à l'aide de ruban adhésif cuivre et de PVC.
 ---
 
 Cette étude documente la fabrication d'une antenne J-pole pour la fréquence **868MHz** (Meshtastic) en utilisant du ruban adhésif de cuivre sur un support isolant. Cette méthode est idéale pour le prototypage rapide mais comporte plusieurs points critiques.

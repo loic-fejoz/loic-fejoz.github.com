@@ -6,6 +6,7 @@ author: Loïc
 tags : [radio, antenne]
 lang: fr
 categories: radio
+summary: Analyse, modélisation avec 4nec2 et réalisation d'une antenne double-J (Open-Stub J-Pole) pour les bandes VHF/UHF.
 ---
 
 Dans cette étude, j'ai analysé et conçu une antenne double-J (Open-Stub J-Pole) combinant une partie dédiée à l'UHF et l'autre à la VHF. 

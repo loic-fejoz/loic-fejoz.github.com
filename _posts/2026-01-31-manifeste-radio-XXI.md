@@ -6,6 +6,7 @@ author: Loïc
 tags : [radio]
 lang: fr
 categories: radio
+summary: Manifeste pour un radioamateurisme tourné vers la créativité, le logiciel et la souveraineté numérique au XXIe siècle.
 ---
 
 *Read this manifesto in [English]({{ site.baseurl }}/radio/2026/01/31/hamradio-manifesto).*
