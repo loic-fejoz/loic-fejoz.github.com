@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Beyond Packet Radio: Designing a Modern Radio Broadcast Protocol (HQFBP)"
-date: 2026-08-20 17:42:00 Europe/Paris
+date: 2026-08-20 17:42:00 +0200
 author: Loïc
 tags : [radio, satellite, DTN, HQFBP]
 lang: en
