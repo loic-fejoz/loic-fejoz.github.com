@@ -3,13 +3,13 @@ layout: post
 title: "Beyond Packet Radio: Designing a Modern Radio Broadcast Protocol (HQFBP)"
 date: 2026-08-20 17:42:00 +0200
 author: Loïc
-tags : [radio, satellite, DTN, HQFBP]
+tags : [radio, satellite, DTN, HQFBP, rust]
 lang: en
 categories: radio
 summary: A deep dive into HQFBP, a modular and robust file broadcasting protocol optimized for noisy, simplex amateur radio channels like satellite downlink.
 ---
 
-*This is the first post in a series exploring Delay-Tolerant Networking (DTN) and resilient communication stacks built for amateur radio, space payloads, and emergency networks.*
+*This is the first post in a series exploring [Delay-Tolerant Networking (DTN)](https://w.fejoz.net/tags/#dtn) and resilient communication stacks built for amateur radio, space payloads, and emergency networks.*
 
 ---
 
@@ -114,3 +114,5 @@ If you want to give it a try, [HQFBP Rust implementation](https://github.com/loi
 From both repositories, you will have everything at hand to reproduce the simulations' scenarios or use it on air!
 I would also like to test [Daniel Estevez (EA4GPZ)' erasure FEC](https://destevez.net/2023/05/an-erasure-fec-for-ssdv/).
 I also would like to use HQFBP as a convergence layer for Delay/Disruption tolerant network.
+
+*In the next post, we will start looking at DTN Delay/Disruption Tolerant Network.*

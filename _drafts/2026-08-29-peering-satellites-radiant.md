@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Peering and Satellites: Peering via 44net and the RADIANT Project"
-date: 2026-08-20 14:01:14
+date: 2026-08-29 14:01:14 +0200
 author: Loïc
 tags : [radio, dtn, 44net, satellite, space]
 lang: en
@@ -9,7 +9,7 @@ categories: radio
 summary: Deploying a persistent DTN node on the amateur radio 44net, configuring peers, and looking ahead to QO-100 geostationary satellite meshes with the RADIANT project.
 ---
 
-*This is the sixth and final post in a series exploring Delay-Tolerant Networking (DTN) and resilient communication stacks built for amateur radio, space payloads, and emergency networks.*
+*This is the sixth and final post in a series exploring [Delay-Tolerant Networking (DTN)](https://w.fejoz.net/tags/#dtn) and resilient communication stacks built for amateur radio, space payloads, and emergency networks.*
 
 ---
 

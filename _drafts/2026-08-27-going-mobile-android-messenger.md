@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Going Mobile: The Native Kotlin dtn-android-messenger"
-date: 2026-08-20 13:57:41
+date: 2026-08-27 13:57:41 +0200
 author: Loïc
 tags : [radio, dtn, android, kotlin, telemetry]
 lang: en
@@ -9,7 +9,7 @@ categories: radio
 summary: Taking DTN off-grid with a native Kotlin Android application supporting chat, file sharing, and SenML weather telemetry.
 ---
 
-*This is the fourth post in a series exploring Delay-Tolerant Networking (DTN) and resilient communication stacks built for amateur radio, space payloads, and emergency networks.*
+*This is the fourth post in a series exploring [Delay-Tolerant Networking (DTN)](https://w.fejoz.net/tags/#dtn) and resilient communication stacks built for amateur radio, space payloads, and emergency networks.*
 
 ---
 
