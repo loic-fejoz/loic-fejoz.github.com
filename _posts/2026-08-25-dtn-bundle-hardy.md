@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hardy DTN & HQFBP"
+title: "2. Hardy DTN & HQFBP"
 date: 2026-08-25 19:08:00 +0200
 author: Loïc
 tags : [radio, satellite, DTN, HQFBP, rust]

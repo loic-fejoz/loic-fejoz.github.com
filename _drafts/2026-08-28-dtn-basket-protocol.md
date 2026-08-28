@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Delay-Tolerant Resource Retrieval: The DTN Basket Protocol (dtnbasket)"
+title: "5. Delay-Tolerant Resource Retrieval: The DTN Basket Protocol (dtnbasket)"
 date: 2026-08-28 13:58:48 +0200
 author: Loïc
-tags : [radio, dtn, protocol, cbor]
+tags : [radio, DTN, protocol, cbor]
 lang: en
 categories: radio
 summary: A deep dive into the DTN Basket Protocol, an asynchronous, CBOR-based resource retrieval schema for Bundle Protocol v7 networks.

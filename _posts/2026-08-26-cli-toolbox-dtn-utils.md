@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "The CLI Toolbox: Writing DTN Applications with dtn-hdy-utils"
+title: "3. The CLI Toolbox: Writing DTN Applications with dtn-hdy-utils"
 date: 2026-08-26 13:55:25 +0200
 author: Loïc
-tags : [radio, dtn, rust, linux]
+tags : [radio, DTN, rust]
 lang: en
 categories: radio
 summary: Lightweight DTN client CLI applications using gRPC for Hardy, and building interactive chat bridges, notification systems, and so on.
 ---
 
-*This is the third post in a series exploring [Delay-Tolerant Networking (DTN)](https://w.fejoz.net/tags/#dtn) and resilient communication stacks built for amateur radio, space payloads, and emergency networks.*
+*This is the third post in a series exploring [Delay-Tolerant Networking (DTN)](/tags/#dtn) and resilient communication stacks built for amateur radio, space payloads, and emergency networks.*
 
 ---
 
@@ -25,11 +25,10 @@ To make this interaction simple on Linux systems, I built [**`dtn-hdy-utils`**, 
 
 ## The Core Utilities
 
-* **`dtnping`:** The DTN equivalent of ICMP ping. It registers as a lightweight client, sends a bundle to a destination EID, and measures the Round-Trip Time (RTT) and paths taken. But contrary to `bp ping` from the Hardy project, `dtnping` is not its own BPA, but leverages your existing Hardy instance.
+* **`dtnping`:** The DTN equivalent of ICMP ping. It registers as a lightweight client, sends a bundle to a destination EID, and measures the Round-Trip Time (RTT) and paths taken. But contrary to `bp ping` from the Hardy project, `dtnping` is not its own BPA. It leverages your existing Hardy instance.
 * **`dtnsend` & `dtnprint`:** The fundamental send/receive pipes. You can pipe any raw text or binary payload from `stdin` into `dtnsend` and have `dtnprint` listen and dump incoming data directly to `stdout`.
 * **`dtnquery`:** Inspects local bundle storage offline (SQLite/PostgreSQL databases) to check the state of the bundle queues and analyze network health.
 * **`dtnfiles`:** Receive BPv7 bundles and save them as files in a directory. It automatically adjust the filename extension for some well-known file types.
-* **`dtnforward`:** Forward received bundles to another `EID`.
 * **`hdy-stats`:** Send a text bundle with some statistics of usage per source EID for last 24h / last week / last month.
 * **`dtntrigger`:** A versatile CLI to run anything on bundle reception that I will examplify right after.
 
@@ -54,6 +53,8 @@ This script acts as a classic fortune teller.
 * A remote station sends a bundle containing their preferred language (e.g. `fr` or `en`) to `dtn://<node>/fortune`.
 * `dtntrigger` receives it and starts a script leveraging the well known `fortune` cli.
 * The script reads the request, generates a random quote using the local `fortune` database, and triggers `dtnsend` to transmit the reply bundle back to the original sender's EID.
+
+For the fun of it, a list of fortunes related to DTN has been generated.
 
 ### 3. Local Desktop Alerts (`dtn-notify.sh`)
 A lightweight utility for home stations or field laptops. It subscribes to a notification endpoint and triggers standard system desktop alerts (using `notify-send`) showing the sender's EID and the message text whenever a bundle arrives.

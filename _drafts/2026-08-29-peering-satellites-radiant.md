@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Peering and Satellites: Peering via 44net and the RADIANT Project"
+title: "6. Peering and Satellites: Peering via 44net and the RADIANT Project"
 date: 2026-08-29 14:01:14 +0200
 author: Loïc
-tags : [radio, dtn, 44net, satellite, space]
+tags : [radio, DTN, 44net, satellite, space]
 lang: en
 categories: radio
 summary: Deploying a persistent DTN node on the amateur radio 44net, configuring peers, and looking ahead to QO-100 geostationary satellite meshes with the RADIANT project.
