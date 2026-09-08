@@ -1,0 +1,19 @@
+flowchart TD
+    subgraph Mobile Field ["Mobile Field (Offline)"]
+        A["dtn-android-messenger <br> (Handheld)📱"] <-->|Bluetooth| B["dtn-android-messenger <br> (Field Gateway)📱"]
+    end
+
+    subgraph Ham Radio Backbone ["44net Backbone"]
+        B <-->|TCPCLv4| C["44net Hardy Node 🌐<br> (44.27.131.233)"]
+    end
+
+    subgraph Home / Lab ["Home Station"]
+        C <-->|gRPC / TCP| D["Desktop Computer <br> (Hardy Node) 🖥️"]
+        H["FOSM-1 Satellite 🛰️"]
+        H -.->|HQFBP| D
+    end
+
+    subgraph Future ["Future Expansion (QO-100 & RADIANT)"]
+        C <-.-> E["Q0-100 DTN Ground Station 📡"]
+        E <-.->|LickLider over QO-100 Satellite 🛰️| F["Remote RADIANT Gateways / Earth Stations 📡"]
+    end
