@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Un SLM pourrait-il devenir radioamateur ?"
-date: 2026-09-13 00:30:00
+date: 2026-09-12 10:10:00 +0200
 author: Loïc
 tags : [SLM, LLM, GenAI, radioamateur, radio]
 lang: fr
