@@ -5,7 +5,7 @@ date: 2026-09-13 00:30:00
 author: Loïc
 tags : [SLM, LLM, GenAI, radioamateur, radio]
 lang: fr
-categories: radio
+categories: study
 summary: Évaluation de SLM fonctionnant sur 8 Go de vRAM sur les questions de l'examen radioamateur français
 ---
 
