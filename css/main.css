@@ -34,6 +34,11 @@ em {
   font-style: italic;
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 1em;
+}
+
 a {
   color: #2a7ae2;
   text-decoration: none;
